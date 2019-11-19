@@ -1,0 +1,28 @@
+@import "../../assets/sass/defs";
+@import "../../assets/sass/mixins";
+
+.list {
+  margin: 20px auto 0;
+  width: 30%;
+
+  &__ordered {
+    list-style-type: none;
+    counter-reset: ordered;
+
+    li {
+      font-size: $normal;
+      line-height: 2;
+
+      &:before {
+        counter-increment: ordered;
+        content: counter(ordered)". ";
+        color: $gray;
+      }
+
+      .username {
+        padding-left: 20px;
+        color: $gray;
+      }
+    }
+  }
+}
