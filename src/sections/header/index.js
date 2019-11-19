@@ -2,10 +2,10 @@ import React from "react";
 import {PageTitle} from "../../components/page-title";
 import "./header.scss";
 
-export function Header() {
+export function Header({pageTitle}) {
     return (
-        <header>
-            <PageTitle title="Users list"/>
+        <header className="container">
+            <PageTitle title={pageTitle}/>
         </header>
     )
 }
