@@ -1,0 +1,17 @@
+@import "../../assets/sass/defs";
+
+.input {
+  display: block;
+
+  &__text {
+    padding: 0 10px;
+    width: 250px;
+    height: 40px;
+    font-size: $normal;
+    border: 2px solid $black;
+
+    &.centered {
+      margin: 0 auto;
+    }
+  }
+}
