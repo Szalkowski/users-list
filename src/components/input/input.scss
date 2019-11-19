@@ -5,7 +5,7 @@
 
   &__text {
     padding: 0 10px;
-    width: 250px;
+    width: 30%;
     height: 40px;
     font-size: $normal;
     border: 2px solid $black;
@@ -13,5 +13,8 @@
     &.centered {
       margin: 0 auto;
     }
+  }
+  &:active, &:focus {
+    outline: none;
   }
 }
