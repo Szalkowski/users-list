@@ -1,12 +1,21 @@
-import React, {Fragment} from "react";
-import {Header} from "./sections/header";
+import React from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
+import {MainPage} from "./page";
 import "./App.scss";
 
 function App() {
     return (
-        <Fragment>
-            <Header/>
-        </Fragment>
+        <Router>
+            <Switch>
+                <Route path="/">
+                    <MainPage/>
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 
