@@ -1,0 +1,5 @@
+@import "assets/sass/defs";
+@import "assets/sass/mixins";
+
+@include font-face("Arial", "arial", normal, $regular);
+@include font-face("Arial", "arial-bold", normal, $bold);
