@@ -4,7 +4,7 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import {MainPage} from "./page";
+import {MainPage} from "./pages";
 import "./App.scss";
 
 function App() {

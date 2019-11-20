@@ -9,12 +9,10 @@
     height: 40px;
     font-size: $normal;
     border: 2px solid $black;
-
-    &.centered {
-      margin: 0 auto;
-    }
   }
-  &:active, &:focus {
+
+  &:active,
+  &:focus {
     outline: none;
   }
 }

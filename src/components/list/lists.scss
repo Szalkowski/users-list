@@ -9,18 +9,18 @@
     list-style-type: none;
     counter-reset: ordered;
 
-    li {
+    &--item {
       font-size: $normal;
       line-height: 2;
 
-      &:before {
-        counter-increment: ordered;
-        content: counter(ordered)". ";
+      .username {
+        padding-left: 20px;
         color: $gray;
       }
 
-      .username {
-        padding-left: 20px;
+      &:before {
+        counter-increment: ordered;
+        content: counter(ordered) ". ";
         color: $gray;
       }
     }

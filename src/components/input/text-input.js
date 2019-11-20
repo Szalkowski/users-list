@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./input.scss";
 
-export function TextInput({classname, id, name, placeholder}) {
+export function TextInput({type, classname, id, name, placeholder}) {
     return (
         <input className={`input input__text ${classname}`}
                id={id}
-               type="text"
+               type={type}
                name={name}
                placeholder={placeholder}
         />
@@ -14,6 +14,7 @@ export function TextInput({classname, id, name, placeholder}) {
 }
 
 TextInput.propTypes = {
+    type: PropTypes.oneOf(["text", "email", "password"]).isRequired,
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     placeholder: PropTypes.string
