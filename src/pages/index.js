@@ -1,11 +1,11 @@
-import React, {Fragment} from "react";
+import React, {Fragment, useState} from "react";
 import {Header} from "../sections/header";
 import {Main} from "../sections/main";
 import {TextInput} from "../components/input/text-input";
 import {UsersList} from "../data/users-list";
-import {OrderedList} from "../components/list/ordered-list";
 
 export function MainPage() {
+    const [updateValue, setUpdateValue] = useState("");
     return (
         <Fragment>
             <Header pageTitle="Users list"/>
@@ -16,8 +16,9 @@ export function MainPage() {
                                id="name-filter"
                                name="filter"
                                placeholder="Search by user name..."
+                               onChange={value => setUpdateValue(value)}
                     />
-                    <OrderedList content={UsersList()}/>
+                    <UsersList name={updateValue}/>
                 </div>
             </Main>
         </Fragment>
