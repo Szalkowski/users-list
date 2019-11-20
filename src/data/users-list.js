@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
+import {fetchData} from "../api/fetch";
 
 export function UsersList() {
     const [usersList, setUsersList] = useState([])
 
     useEffect(() => {
         async function getList() {
-            const fetchData = await fetch("https://jsonplaceholder.typicode.com/users");
-            setUsersList(await fetchData.json());
+            setUsersList(await fetchData("https://jsonplaceholder.typicode.com/users"));
         }
 
         getList();
