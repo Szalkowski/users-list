@@ -1,6 +1,6 @@
 # Users list
-Project based on create-react-app with mobx, routing and hooks.
-This project priorities were get list from public endpoint `https://jsonplaceholder.typicode.com/users` get names and nicknames from list and set up input to filter by name. No matter capital or small letter you type in it'll find that you looking for.
+Project based on create-react-app with mobx, routing and hooks. <br>
+This project priorities were get users list from public endpoint: `https://jsonplaceholder.typicode.com/users` figure out names and nicknames from list and set up input to filter by name. No matter capital or small letter you type in it, it going to find what you looking for.
 
 ## Playground
 If you want to see how it's look and work just click [this link](https://szalkowski.github.io/users-list)
@@ -22,11 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 

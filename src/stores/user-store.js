@@ -2,22 +2,22 @@ import {useLocalStore} from "mobx-react"
 import {fetchData} from "../api/fetch";
 
 export const UsersStore = () => {
-    const localStore = useLocalStore(() => ({
+    const store = useLocalStore(() => ({
         usersList: [],
         filteredList: [],
 
         async loadList() {
-            localStore.usersList = await fetchData("https://jsonplaceholder.typicode.com/users");
-            localStore.filteredList = localStore.usersList;
+            store.usersList = await fetchData("https://jsonplaceholder.typicode.com/users");
+            store.filteredList = store.usersList;
         },
 
         filterUsersByName(name) {
             const regex = new RegExp(name.toLowerCase());
-            localStore.filteredList = localStore.usersList.filter(user =>
+            store.filteredList = store.usersList.filter(user =>
                 regex.test(user.name.toLowerCase())
             );
         }
     }));
 
-    return localStore;
+    return store;
 };
