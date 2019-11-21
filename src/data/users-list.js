@@ -1,22 +1,11 @@
 import React, {useEffect} from "react";
 import PropTypes from "prop-types";
-import {useObserver, useLocalStore} from "mobx-react";
-import {fetchData} from "../api/fetch";
+import {useObserver} from "mobx-react";
+import {UsersStore} from "../stores/user-store"
 import {OrderedList} from "../components/list/ordered-list";
 
 export function UsersList({name}) {
-    const usersStore = useLocalStore(() => ({
-        usersList: [],
-        filteredList: [],
-        async loadList() {
-            usersStore.usersList = await fetchData("https://jsonplaceholder.typicode.com/users");
-            usersStore.filteredList = usersStore.usersList;
-        },
-        filterUsersByName(name) {
-            const regex = new RegExp(name);
-            usersStore.filteredList = usersStore.usersList.filter(user => regex.test(user.name));
-        }
-    }));
+    const usersStore = UsersStore();
 
     useEffect(() => {
         usersStore.loadList();
