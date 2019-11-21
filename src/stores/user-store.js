@@ -12,8 +12,10 @@ export const UsersStore = () => {
         },
 
         filterUsersByName(name) {
-            const regex = new RegExp(name);
-            localStore.filteredList = localStore.usersList.filter(user => regex.test(user.name));
+            const regex = new RegExp(name.toLowerCase());
+            localStore.filteredList = localStore.usersList.filter(user =>
+                regex.test(user.name.toLowerCase())
+            );
         }
     }));
 
