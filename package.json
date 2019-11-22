@@ -1,8 +1,8 @@
 {
-  "homepage": "https://szalkowski.github.io/users-list",
   "name": "users-recruitment",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://szalkowski.github.io/users-list",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "mobx": "^5.15.0",
