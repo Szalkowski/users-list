@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": process.env.REACT_APP_PATHNAME,
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
